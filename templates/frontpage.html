@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url({{ url_for('static', filename='hacker.jpeg') }});
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            width:100vw;
+            height:100vh;
+            overflow: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+    width: 50%;
+    margin: 100px auto; /* Center the container */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 80% opacity */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center;
+}
+
+
+        h1 {
+            color: #262626; /* Instagram's main text color */
+        }
+
+        .button {
+            background-color: #0d0d0d; /* Instagram's primary color */
+            border: none;
+            color: #ffffff; /* White text color */
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 80%;
+            margin: 20px auto; /* Center the button */
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .button:hover {
+            background-color: #00677a; /* Darker shade of primary color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NarcKO</h1>
+        <a href="{{url_for('hashtag')}}" class="button">Search for Top profiles and Hashtags</a>
+        <a href="{{url_for('profile')}}" class="button">Get Profile Info</a>
+        <a href="https://detect.roboflow.com/?model=drug-detection-jgolc&version=1&api_key=gLGRgQqPCg16zTeW4Dry" class="button">Scan Image for Drugs</a>
+        <h3>Drug Detection on Instagram</h3>
+    </div>
+</body>
+</html>
